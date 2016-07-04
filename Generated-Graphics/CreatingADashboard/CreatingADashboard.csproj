@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{81677D24-3FF9-4010-8496-9204774CFB3C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CreatingADashboard</RootNamespace>
+    <AssemblyName>CreatingADashboard</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\ServerDashboard\Colors.cs" />
+    <Compile Include="Controls\ServerDashboard\DashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\ServerDashboard\DashboardForm.Designer.cs">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ServerDashboard\Fonts\Handler.cs" />
+    <Compile Include="Controls\ServerDashboard\FormAccessControls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ServerDashboard\FormAccessControls.Designer.cs">
+      <DependentUpon>FormAccessControls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ServerDashboard\FormControls\FormButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ServerDashboard\FormControls\FormButton.Designer.cs">
+      <DependentUpon>FormButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ServerDashboard\FormControls\GeneratedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ServerDashboard\FormControls\GeneratedTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ServerDashboard\FormControls\TabIcon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ServerDashboard\FormControls\TabIcon.Designer.cs">
+      <DependentUpon>TabIcon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ServerDashboard\FormControls\TabPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ServerDashboard\FormControls\UIEditors\TabControl.cs" />
+    <Compile Include="Controls\ServerDashboard\GraphicsUtil.cs" />
+    <Compile Include="Controls\ServerDashboard\NotesAboutDesign.cs" />
+    <Compile Include="Controls\Utility\Conversions.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controls\ServerDashboard\DashboardForm.resx">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ServerDashboard\FormAccessControls.resx">
+      <DependentUpon>FormAccessControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ServerDashboard\FormControls\FormButton.resx">
+      <DependentUpon>FormButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ServerDashboard\FormControls\TabIcon.resx">
+      <DependentUpon>TabIcon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ServerDashboard\FormControls\UIEditors\TabControl.resx">
+      <DependentUpon>TabControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Fonts\fontawesome-webfont.ttf" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maximise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DashboardUtil\DashboardUtil.csproj">
+      <Project>{ac48b6e4-b1d2-418f-8174-e87d050b8978}</Project>
+      <Name>DashboardUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FontAwesome-WinForms\FontAwesomeIcons\FontAwesomeIcons.csproj">
+      <Project>{56f662a1-d1e3-453f-bf74-9d8d03b6affc}</Project>
+      <Name>FontAwesomeIcons</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
